@@ -4,11 +4,11 @@ import pizza.Pizza;
 import pizza.builder.PizzaBuilder;
 import pizza.enums.*;
 
-public class ClassicalPepperoniBuilder implements PizzaBuilder {
+public class ClassicalPepperoniBuilder extends PizzaBuilder {
     private Pizza pizza = new Pizza();
 
     @Override
-    public void setSize() {
+    public void setSize(Size size) {
         pizza.setSize(Size.MEDIUM);
     }
 
@@ -46,10 +46,5 @@ public class ClassicalPepperoniBuilder implements PizzaBuilder {
     @Override
     public void setVegetarian() {
         pizza.setVegetarian(false);
-    }
-
-    @Override
-    public Pizza build() {
-        return pizza;
     }
 }
