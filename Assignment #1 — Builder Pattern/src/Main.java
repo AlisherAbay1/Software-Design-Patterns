@@ -1,8 +1,9 @@
-import pizza.Pizza;
-import pizza.builder.PizzaDirector;
-import pizza.builder.concrete_builders.PizzaObjectBuilder;
-import pizza.builder.concrete_builders.PizzaReceiptBuilder;
-import pizza.enums.Size;
+package src;
+import src.pizza.Pizza;
+import src.pizza.builder.PizzaDirector;
+import src.pizza.builder.concrete_builders.PizzaObjectBuilder;
+import src.pizza.builder.concrete_builders.PizzaReceiptBuilder;
+import src.pizza.enums.Size;
 
 public class Main {
     public static void main(String[] args) {

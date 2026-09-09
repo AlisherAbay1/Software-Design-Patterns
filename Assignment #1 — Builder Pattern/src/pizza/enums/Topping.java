@@ -1,4 +1,4 @@
-package pizza.enums;
+package src.pizza.enums;
 
 public enum Topping {
     PEPPERONI, MUSHROOMS, ONIONS, OLIVES, BACON, PINEAPPLE, MOZZARELLA, BASIL, HAM

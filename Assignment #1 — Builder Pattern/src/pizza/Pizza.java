@@ -1,8 +1,9 @@
-package pizza;
+package src.pizza;
 
 import java.util.ArrayList;
 import java.util.List;
-import pizza.enums.*;
+
+import src.pizza.enums.*;
 
 public class Pizza {
     private Size size;

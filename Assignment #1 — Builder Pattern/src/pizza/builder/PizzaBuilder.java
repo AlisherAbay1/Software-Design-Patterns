@@ -1,6 +1,6 @@
-package pizza.builder;
+package src.pizza.builder;
 
-import pizza.enums.*;
+import src.pizza.enums.*;
 
 public interface PizzaBuilder {
     PizzaBuilder reset();
