@@ -1,46 +1,38 @@
 package pizza.builder;
 
-import pizza.Pizza;
-import pizza.enums.Size;
+import pizza.enums.*;
 
 public class PizzaDirector {
 
-    public Pizza makeSmallPizza(PizzaBuilder builder) {
-        return builder
-                .setSize(Size.SMALL)
-                .setDough()
-                .setSauce()
-                .addToppings()
-                .setExtraCheese()
-                .setGlutenFreeDough()
-                .setSpicyLevel()
-                .setVegetarian()
-                .getPizza();
+    public void makePepperoni(PizzaBuilder builder, Size size) {
+        builder.reset()
+               .setSize(size)
+               .setDough(Dough.THIN)
+               .setSauce(Sauce.TOMATO)
+               .addTopping(Topping.MOZZARELLA)
+               .addTopping(Topping.PEPPERONI)
+               .setSpicyLevel(SpicyLevel.MILD)
+               .setVegetarian(false);
     }
 
-    public Pizza makeMediumPizza(PizzaBuilder builder) {
-        return builder
-                .setSize(Size.MEDIUM)
-                .setDough()
-                .setSauce()
-                .addToppings()
-                .setExtraCheese()
-                .setGlutenFreeDough()
-                .setSpicyLevel()
-                .setVegetarian()
-                .getPizza();
+    public void makeHawaiian(PizzaBuilder builder, Size size) {
+        builder.reset()
+               .setSize(size)
+               .setDough(Dough.THIN)
+               .setSauce(Sauce.TOMATO)
+               .addTopping(Topping.MOZZARELLA)
+               .addTopping(Topping.HAM)
+               .addTopping(Topping.PINEAPPLE)
+               .setVegetarian(false);
     }
 
-    public Pizza makeLargePizza(PizzaBuilder builder) {
-        return builder
-                .setSize(Size.LARGE)
-                .setDough()
-                .setSauce()
-                .addToppings()
-                .setExtraCheese()
-                .setGlutenFreeDough()
-                .setSpicyLevel()
-                .setVegetarian()
-                .getPizza();
+    public void makeMargherita(PizzaBuilder builder, Size size) {
+        builder.reset()
+               .setSize(size)
+               .setDough(Dough.THIN)
+               .setSauce(Sauce.TOMATO)
+               .addTopping(Topping.MOZZARELLA)
+               .addTopping(Topping.BASIL)
+               .setVegetarian(true);
     }
 }
