@@ -4,13 +4,6 @@ import pizza.builder.PizzaBuilder;
 import pizza.enums.*;
 
 public class ClassicalHawaiianBuilder extends PizzaBuilder {
-
-    @Override
-    public PizzaBuilder setSize(Size size) {
-        this.pizza.setSize(size);
-        return this;
-    }
-
     @Override
     public PizzaBuilder setDough() {
         this.pizza.setDough(Dough.THIN);

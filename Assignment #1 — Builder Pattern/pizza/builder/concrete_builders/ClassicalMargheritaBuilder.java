@@ -6,12 +6,6 @@ import pizza.enums.*;
 
 public class ClassicalMargheritaBuilder extends PizzaBuilder {
     @Override
-    public PizzaBuilder setSize(Size size) {
-        this.pizza.setSize(size);
-        return this;
-    }
-
-    @Override
     public PizzaBuilder setDough() {
         this.pizza.setDough(Dough.THIN);
         return this;

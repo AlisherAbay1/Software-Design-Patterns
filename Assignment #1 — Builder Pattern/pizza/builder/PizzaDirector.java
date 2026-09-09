@@ -15,7 +15,7 @@ public class PizzaDirector {
                 .setGlutenFreeDough()
                 .setSpicyLevel()
                 .setVegetarian()
-                .getBuildedPizza();
+                .getPizza();
     }
 
     public Pizza makeMediumPizza(PizzaBuilder builder) {
@@ -28,7 +28,7 @@ public class PizzaDirector {
                 .setGlutenFreeDough()
                 .setSpicyLevel()
                 .setVegetarian()
-                .getBuildedPizza();
+                .getPizza();
     }
 
     public Pizza makeLargePizza(PizzaBuilder builder) {
@@ -41,6 +41,6 @@ public class PizzaDirector {
                 .setGlutenFreeDough()
                 .setSpicyLevel()
                 .setVegetarian()
-                .getBuildedPizza();
+                .getPizza();
     }
 }

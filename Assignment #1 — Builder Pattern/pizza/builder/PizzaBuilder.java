@@ -9,7 +9,10 @@ public abstract class PizzaBuilder {
         this.reset();
     }
 
-    public abstract PizzaBuilder setSize(Size size);
+    public PizzaBuilder setSize(Size size) {
+        this.pizza.setSize(size);
+        return this;
+    }
     public abstract PizzaBuilder setDough();
     public abstract PizzaBuilder setSauce();
     public abstract PizzaBuilder addToppings();
@@ -18,7 +21,7 @@ public abstract class PizzaBuilder {
     public abstract PizzaBuilder setSpicyLevel();
     public abstract PizzaBuilder setVegetarian();
 
-    public Pizza getBuildedPizza() {
+    public Pizza getPizza() {
         Pizza currentPizza = pizza;
         this.reset();
         return currentPizza;
