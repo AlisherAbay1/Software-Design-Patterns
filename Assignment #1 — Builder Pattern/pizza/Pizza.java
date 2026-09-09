@@ -1,5 +1,6 @@
 package pizza;
 import java.util.List;
+import java.util.ArrayList;
 
 import pizza.enums.*;
 
@@ -8,11 +9,11 @@ public class Pizza {
     protected Size size;
     protected Dough dough;
     protected Sauce sauce;
-    protected List<Topping> topping;
+    protected List<Topping> topping = new ArrayList<>();
     protected Boolean extraCheese;
     protected Boolean glutenFreeDough;
     protected SpicyLevel spicyLevel;
-    protected Boolean vegetarian;
+    protected Boolean isVegetarian;
 
     public void setSize(Size size) {
         this.size = size;
@@ -42,7 +43,21 @@ public class Pizza {
         this.spicyLevel = spicyLevel;
     }
     
-    public void setVegetarian(Boolean vegetarian) {
-        this.vegetarian = vegetarian;
+    public void setVegetarian(Boolean isVegetarian) {
+        this.isVegetarian = isVegetarian;
+    }
+
+    @Override
+    public String toString() {
+        return "Pizza {" +
+                "size=" + size +
+                ", dough=" + dough +
+                ", sauce=" + sauce +
+                ", toppings=" + topping +
+                ", extraCheese=" + extraCheese +
+                ", glutenFree=" + glutenFreeDough +
+                ", spicyLevel=" + spicyLevel +
+                ", isVegetarian=" + isVegetarian +
+                '}';
     }
 }
