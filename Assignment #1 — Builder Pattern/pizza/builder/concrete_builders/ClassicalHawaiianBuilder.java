@@ -1,0 +1,56 @@
+package pizza.builder.concrete_builders;
+
+import pizza.Pizza;
+import pizza.builder.PizzaBuilder;
+import pizza.enums.*;
+
+public class ClassicalHawaiianBuilder implements PizzaBuilder {
+    private Pizza pizza = new Pizza();
+
+    @Override
+    public void setSize() {
+        pizza.setSize(Size.MEDIUM);
+    }
+
+    @Override
+    public void setDough() {
+        pizza.setDough(Dough.THIN);
+    }
+
+    @Override
+    public void setSauce() {
+        pizza.setSauce(Sauce.TOMATO);
+    }
+
+    @Override
+    public void addToppings() {
+        pizza.addTopping(Topping.HAM);
+        pizza.addTopping(Topping.PINEAPPLE);
+        pizza.addTopping(Topping.MOZZARELLA);
+    }
+
+    @Override
+    public void setExtraCheese() {
+        pizza.setExtraCheese(false);
+    }
+
+    @Override
+    public void setGlutenFreeDough() {
+        pizza.setGlutenFreeDough(false);
+    }
+
+    @Override
+    public void setSpicyLevel() {
+        pizza.setSpicyLevel(SpicyLevel.NONE);
+    }
+
+    @Override
+    public void setVegetarian() {
+        pizza.setVegetarian(false);
+    }
+
+    @Override
+    public Pizza build() {
+        return pizza;
+    }
+}
