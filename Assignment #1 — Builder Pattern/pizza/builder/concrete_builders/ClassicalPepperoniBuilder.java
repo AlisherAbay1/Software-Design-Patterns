@@ -1,50 +1,55 @@
 package pizza.builder.concrete_builders;
 
-import pizza.Pizza;
 import pizza.builder.PizzaBuilder;
 import pizza.enums.*;
 
 public class ClassicalPepperoniBuilder extends PizzaBuilder {
-    private Pizza pizza = new Pizza();
-
     @Override
-    public void setSize(Size size) {
-        pizza.setSize(Size.MEDIUM);
+    public PizzaBuilder setSize(Size size) {
+        this.pizza.setSize(size);
+        return this;
     }
 
     @Override
-    public void setDough() {
-        pizza.setDough(Dough.THIN);
+    public PizzaBuilder setDough() {
+        this.pizza.setDough(Dough.THIN);
+        return this;
     }
 
     @Override
-    public void setSauce() {
-        pizza.setSauce(Sauce.TOMATO);
+    public PizzaBuilder setSauce() {
+        this.pizza.setSauce(Sauce.TOMATO);
+        return this;
     }
 
     @Override
-    public void addToppings() {
-        pizza.addTopping(Topping.MOZZARELLA);
-        pizza.addTopping(Topping.PEPPERONI);
+    public PizzaBuilder addToppings() {
+        this.pizza.addTopping(Topping.MOZZARELLA);
+        this.pizza.addTopping(Topping.PEPPERONI);
+        return this;
     }
 
     @Override
-    public void setExtraCheese() {
-        pizza.setExtraCheese(false);
+    public PizzaBuilder setExtraCheese() {
+        this.pizza.setExtraCheese(false);
+        return this;
     }
 
     @Override
-    public void setGlutenFreeDough() {
-        pizza.setGlutenFreeDough(false);
+    public PizzaBuilder setGlutenFreeDough() {
+        this.pizza.setGlutenFreeDough(false);
+        return this;
     }
 
     @Override
-    public void setSpicyLevel() {
-        pizza.setSpicyLevel(SpicyLevel.NONE);
+    public PizzaBuilder setSpicyLevel() {
+        this.pizza.setSpicyLevel(SpicyLevel.NONE);
+        return this;
     }
 
     @Override
-    public void setVegetarian() {
-        pizza.setVegetarian(false);
+    public PizzaBuilder setVegetarian() {
+        this.pizza.setVegetarian(false);
+        return this;
     }
 }

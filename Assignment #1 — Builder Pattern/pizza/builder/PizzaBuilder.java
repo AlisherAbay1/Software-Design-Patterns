@@ -4,20 +4,27 @@ import pizza.Pizza;
 import pizza.enums.Size;
 
 public abstract class PizzaBuilder {
-    protected Pizza pizza = new Pizza();
+    protected Pizza pizza;
+    public PizzaBuilder() {
+        this.reset();
+    }
 
-    public abstract void setSize(Size size);
-    public abstract void setDough();
-    public abstract void setSauce();
-    public abstract void addToppings();
-    public abstract void setExtraCheese();
-    public abstract void setGlutenFreeDough();
-    public abstract void setSpicyLevel();
-    public abstract void setVegetarian();
+    public abstract PizzaBuilder setSize(Size size);
+    public abstract PizzaBuilder setDough();
+    public abstract PizzaBuilder setSauce();
+    public abstract PizzaBuilder addToppings();
+    public abstract PizzaBuilder setExtraCheese();
+    public abstract PizzaBuilder setGlutenFreeDough();
+    public abstract PizzaBuilder setSpicyLevel();
+    public abstract PizzaBuilder setVegetarian();
 
-    Pizza getBuildedPizza() {
+    public Pizza getBuildedPizza() {
         Pizza currentPizza = pizza;
-        pizza = new Pizza();
+        this.reset();
         return currentPizza;
     } 
+
+    public void reset() {
+        this.pizza = new Pizza();
+    }
 }
