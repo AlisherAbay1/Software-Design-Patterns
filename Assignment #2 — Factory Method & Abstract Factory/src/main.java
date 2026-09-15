@@ -1,7 +1,7 @@
-import fabric_method.FactoryMethodApplication;
 import abstract_factory.AbstractFactoryApplication;
 import abstract_factory.factories.implementations.*;
 import abstract_factory.products.abstractions.*;
+import factory_method.FactoryMethodApplication;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package fabric_method;
+package factory_method;
 
-import fabric_method.factories.TransportFactory;
-import fabric_method.factories.implementations.ShipFactory;
-import fabric_method.factories.implementations.TruckFactory;
+import factory_method.factories.TransportFactory;
+import factory_method.factories.implementations.ShipFactory;
+import factory_method.factories.implementations.TruckFactory;
 
 public class FactoryMethodApplication {
     TransportFactory factory;
