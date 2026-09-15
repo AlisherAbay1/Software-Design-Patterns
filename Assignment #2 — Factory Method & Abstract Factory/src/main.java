@@ -1,4 +1,3 @@
-import fabric_method.*;
 import fabric_method.factories.TransportFactory;
 import fabric_method.factories.implementations.ShipFactory;
 import fabric_method.factories.implementations.TruckFactory;

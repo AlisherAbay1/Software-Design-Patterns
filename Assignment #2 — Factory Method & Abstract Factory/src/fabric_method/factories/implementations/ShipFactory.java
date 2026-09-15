@@ -1,6 +1,5 @@
 package fabric_method.factories.implementations;
 
-import fabric_method.*;
 import fabric_method.factories.TransportFactory;
 import fabric_method.products.*;
 import fabric_method.products.implementations.Ship;
