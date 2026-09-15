@@ -4,7 +4,7 @@ import fabric_method.factories.TransportFactory;
 import fabric_method.factories.implementations.ShipFactory;
 import fabric_method.factories.implementations.TruckFactory;
 
-public class FabricMethodApplication {
+public class FactoryMethodApplication {
     TransportFactory factory;
 
     public void showFabricMethodWork(String config) {

@@ -1,4 +1,4 @@
-import fabric_method.FabricMethodApplication;
+import fabric_method.FactoryMethodApplication;
 import abstract_factory.AbstractFactoryApplication;
 import abstract_factory.factories.implementations.*;
 import abstract_factory.products.abstractions.*;
@@ -8,7 +8,7 @@ public class Main {
         printPatternsSeparator("Fabric method");
 
         String[] configValues = {"Truck", "Ship"};
-        FabricMethodApplication transportDemo = new FabricMethodApplication();
+        FactoryMethodApplication transportDemo = new FactoryMethodApplication();
         for (String config: configValues) {
             transportDemo.showFabricMethodWork(config);
         }
