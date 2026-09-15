@@ -10,7 +10,7 @@ public class OrcWarrior extends Warrior{
     }
 
     @Override 
-    public void attack() {
-        System.out.println("Ork tried to attack with base attack power " + attackPower);
+    public void attack(Integer weaponPower) {
+        System.out.println("Elf tried to attack with " + (attackPower + weaponPower) + " attack power ");
     }
 }
