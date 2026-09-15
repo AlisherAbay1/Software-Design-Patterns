@@ -1,4 +1,6 @@
-package fabric_method;
+package fabric_method.factories;
+
+import fabric_method.products.Transport;
 
 public abstract class TransportFactory {
     public double deliver(String objectId, double distanceKm) {

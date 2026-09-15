@@ -1,6 +1,6 @@
-package fabric_method.products;
+package fabric_method.products.implementations;
 
-import fabric_method.Transport;
+import fabric_method.products.Transport;
 
 public class Truck extends Transport {
     public Truck() {

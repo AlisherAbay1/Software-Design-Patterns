@@ -1,6 +1,7 @@
 import fabric_method.*;
-import fabric_method.factories.ShipFactory;
-import fabric_method.factories.TruckFactory;
+import fabric_method.factories.TransportFactory;
+import fabric_method.factories.implementations.ShipFactory;
+import fabric_method.factories.implementations.TruckFactory;
 
 public class Main {
     static TransportFactory factory;

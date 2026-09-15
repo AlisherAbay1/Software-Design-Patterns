@@ -1,4 +1,4 @@
-package fabric_method;
+package fabric_method.products;
 
 
 import java.util.ArrayList;
