@@ -1,6 +1,6 @@
 package fabric_method;
 
-abstract class TransportFactory {
+public abstract class TransportFactory {
     public double deliver(String objectId, double distanceKm) {
         Transport transport = createTransport();
 
