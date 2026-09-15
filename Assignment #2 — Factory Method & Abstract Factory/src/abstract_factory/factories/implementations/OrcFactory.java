@@ -6,8 +6,8 @@ import abstract_factory.products.implementations.orcs.*;
 
 public class OrcFactory implements RaceFactory {
     @Override
-    public Warrior createWarrior() {
-        return new OrcWarrior();
+    public Warrior createWarrior(Weapon weapon, Armor armor) {
+        return new OrcWarrior(weapon, armor);
     }
 
     @Override

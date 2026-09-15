@@ -1,6 +1,7 @@
 import fabric_method.FabricMethodApplication;
 import abstract_factory.AbstractFactoryApplication;
 import abstract_factory.factories.implementations.*;
+import abstract_factory.products.abstractions.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,13 +17,29 @@ public class Main {
 
         AbstractFactoryApplication elfDemo = new AbstractFactoryApplication(new ElfFactory());
         AbstractFactoryApplication orcDemo = new AbstractFactoryApplication(new OrcFactory());
-        elfDemo.showAbstractFactoryWork();
 
-        System.out.print("\n");
-        printLineSeparator();
-        System.out.print("\n");
+        Warrior elf = elfDemo.getWarrior();
+        Warrior orc = orcDemo.getWarrior();
 
-        orcDemo.showAbstractFactoryWork();
+        System.out.println(elf.name + " vs " + orc.name);
+        System.out.println();
+
+        elf.weapon.attackEffect();
+        elf.armor.protectionEffect();
+        orc.weapon.attackEffect();
+        orc.armor.protectionEffect();
+        System.out.println();
+
+        while (elf.health > 0 && orc.health > 0) {
+            elf.attack(orc);
+            if (orc.health <= 0) break;
+
+            orc.attack(elf);
+        }
+
+        System.out.println();
+        String winner = elf.health > 0 ? elf.name : orc.name;
+        System.out.println(winner + " wins!");
     }
 
     public static void printLineSeparator() {

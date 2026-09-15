@@ -9,15 +9,10 @@ public class AbstractFactoryApplication {
         this.factory = factory;
     }
 
-    public void showAbstractFactoryWork() {
-        Warrior warrior = factory.createWarrior();
+    public Warrior getWarrior() {
         Weapon weapon = factory.createWeapon();
         Armor armor = factory.createArmor();
-
-        warrior.attack(weapon.damage);
-        warrior.takeDamage(20, 30, armor.protection);
-        warrior.takeDamage(20, 30, armor.protection);
-        armor.protectionEffect();
-        weapon.attackEffect();
+        Warrior warrior = factory.createWarrior(weapon, armor);
+        return warrior;
     }
 }
