@@ -14,6 +14,9 @@ public class Main {
             Double deliveryCost = factory.deliver(objectId, 5);
             System.out.println(config + "'s' delivery cost for " + objectId + " is equal to " + deliveryCost + "$");
         }
+
+        // Abstract Fabric
+        
     }
 
     static void createFactory(String config) {
