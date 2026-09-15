@@ -6,8 +6,8 @@ import abstract_factory.products.implementations.elfs.*;
 
 public class ElfFactory implements RaceFactory {
     @Override
-    public Warrior createWarrior(Weapon weapon, Armor armor) {
-        return new ElfWarrior(weapon, armor);
+    public Warrior createWarrior() {
+        return new ElfWarrior();
     }
 
     @Override

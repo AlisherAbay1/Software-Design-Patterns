@@ -10,9 +10,11 @@ public class AbstractFactoryApplication {
     }
 
     public Warrior getWarrior() {
+        Warrior warrior = factory.createWarrior();
         Weapon weapon = factory.createWeapon();
         Armor armor = factory.createArmor();
-        Warrior warrior = factory.createWarrior(weapon, armor);
+
+        warrior.equip(weapon, armor);
         return warrior;
     }
 }

@@ -9,12 +9,19 @@ public abstract class Warrior {
 
     public abstract void attack(Warrior warrior);
 
+    public void equip(Weapon weapon, Armor armor) {
+        this.weapon = weapon;
+        this.armor = armor;
+    }
+
     public void takeDamage(int damage) {
-        if (damage <= armor.protection) {
+        int protection = (armor != null) ? armor.protection : 0;
+
+        if (damage <= protection) {
             System.out.println("Attack missed.");
             return;
         }
-        health -= damage - armor.protection;
+        health -= damage - protection;
         if (health <= 0) {
             System.out.println(name + " has died");
         } else {
