@@ -9,6 +9,6 @@ public class OrcAxe extends Weapon {
 
     @Override 
     public void attackEffect() {
-        System.out.println("Ork's axe created a lot of fire around.");
+        System.out.println("Orc's axe created a lot of fire around.");
     }
 }

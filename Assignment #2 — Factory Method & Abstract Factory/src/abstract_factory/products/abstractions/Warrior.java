@@ -10,6 +10,7 @@ public abstract class Warrior {
     public void takeDamage(int baseDamage, int weaponDamage, int protection) {
         if (baseDamage + weaponDamage <= protection) {
             System.out.println("Attack missed.");
+            return;
         }
         health -= baseDamage + weaponDamage - protection;
         if (health <= 0) {

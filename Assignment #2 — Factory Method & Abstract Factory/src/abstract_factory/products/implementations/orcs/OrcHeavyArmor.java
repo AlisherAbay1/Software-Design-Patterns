@@ -9,6 +9,6 @@ public class OrcHeavyArmor extends Armor{
 
     @Override 
     public void protectionEffect() {
-        System.out.println("Ork's armor created blood under him.");
+        System.out.println("Orc's armor created blood under him.");
     } 
 }
