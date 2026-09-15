@@ -1,31 +1,39 @@
-import fabric_method.factories.TransportFactory;
-import fabric_method.factories.implementations.ShipFactory;
-import fabric_method.factories.implementations.TruckFactory;
+import fabric_method.FabricMethodApplication;
+import abstract_factory.AbstractFactoryApplication;
+import abstract_factory.factories.implementations.*;
 
 public class Main {
-    static TransportFactory factory;
-
     public static void main(String[] args) {
-        // Fabric method
+        printPatternsSeparator("Fabric method");
+
         String[] configValues = {"Truck", "Ship"};
+        FabricMethodApplication transportDemo = new FabricMethodApplication();
         for (String config: configValues) {
-            createFactory(config);
-            String objectId = "123";
-            Double deliveryCost = factory.deliver(objectId, 5);
-            System.out.println(config + "'s' delivery cost for " + objectId + " is equal to " + deliveryCost + "$");
+            transportDemo.showFabricMethodWork(config);
         }
 
-        // Abstract Fabric
-        
+        printPatternsSeparator("Abstract Factory");
+
+        AbstractFactoryApplication elfDemo = new AbstractFactoryApplication(new ElfFactory());
+        AbstractFactoryApplication orcDemo = new AbstractFactoryApplication(new OrcFactory());
+        elfDemo.showAbstractFactoryWork();
+
+        System.out.print("\n");
+        printLineSeparator();
+        System.out.print("\n");
+
+        orcDemo.showAbstractFactoryWork();
     }
 
-    static void createFactory(String config) {
-        if (config.equals("Ship")) {
-            factory = new ShipFactory();
-        } else if (config.equals("Truck")) {
-            factory = new TruckFactory();
-        } else {
-            throw new IllegalArgumentException("Uncorrect transport type");
-        }
+    public static void printLineSeparator() {
+        System.out.println("-".repeat(50));
+    }
+
+    public static void printPatternsSeparator(String factoryName) {
+        System.out.print("\n");
+        printLineSeparator();
+        System.out.println(factoryName);
+        printLineSeparator();
+        System.out.print("\n");
     }
 }

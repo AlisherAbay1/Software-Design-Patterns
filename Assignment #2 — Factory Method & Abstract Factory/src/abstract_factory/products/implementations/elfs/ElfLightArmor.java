@@ -1,6 +1,6 @@
-package abstract_fabric.products.implementations.elfs;
+package abstract_factory.products.implementations.elfs;
 
-import abstract_fabric.products.abstractions.*;
+import abstract_factory.products.abstractions.*;
 
 public class ElfLightArmor extends Armor{
     public ElfLightArmor() {

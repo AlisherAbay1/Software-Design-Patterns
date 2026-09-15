@@ -1,6 +1,6 @@
-package abstract_fabric.products.implementations.orcs;
+package abstract_factory.products.implementations.orcs;
 
-import abstract_fabric.products.abstractions.*;
+import abstract_factory.products.abstractions.*;
 
 public class OrcAxe extends Weapon {
     public OrcAxe() {

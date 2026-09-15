@@ -1,8 +1,8 @@
-package abstract_fabric.fabrics;
+package abstract_factory.factories;
 
-import abstract_fabric.products.abstractions.*;
+import abstract_factory.products.abstractions.*;
 
-public interface RaceFabric {
+public interface RaceFactory {
     public abstract Warrior createWarrior();
     public abstract Armor createArmor();
     public abstract Weapon createWeapon();

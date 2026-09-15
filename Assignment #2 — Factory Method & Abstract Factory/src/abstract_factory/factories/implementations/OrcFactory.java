@@ -1,10 +1,10 @@
-package abstract_fabric.fabrics.implementations;
+package abstract_factory.factories.implementations;
 
-import abstract_fabric.fabrics.*;
-import abstract_fabric.products.implementations.orcs.*;
-import abstract_fabric.products.abstractions.*;
+import abstract_factory.factories.*;
+import abstract_factory.products.abstractions.*;
+import abstract_factory.products.implementations.orcs.*;
 
-public class OrcFabric implements RaceFabric {
+public class OrcFactory implements RaceFactory {
     @Override
     public Warrior createWarrior() {
         return new OrcWarrior();

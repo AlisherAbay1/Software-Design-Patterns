@@ -1,10 +1,10 @@
-package abstract_fabric.fabrics.implementations;
+package abstract_factory.factories.implementations;
 
-import abstract_fabric.fabrics.*;
-import abstract_fabric.products.implementations.elfs.*;
-import abstract_fabric.products.abstractions.*;
+import abstract_factory.factories.*;
+import abstract_factory.products.abstractions.*;
+import abstract_factory.products.implementations.elfs.*;
 
-public class ElfFabric implements RaceFabric {
+public class ElfFactory implements RaceFactory {
     @Override
     public Warrior createWarrior() {
         return new ElfWarrior();

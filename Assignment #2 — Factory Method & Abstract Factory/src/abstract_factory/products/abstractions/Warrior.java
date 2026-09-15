@@ -1,4 +1,4 @@
-package abstract_fabric.products.abstractions;
+package abstract_factory.products.abstractions;
 
 public abstract class Warrior {
     public Integer health;
