@@ -1,5 +1,3 @@
-import renderers.*;
-import shapes.*;
 import renderers.concrete_renderers.*;
 import shapes.concrete_shapes.*;
 
