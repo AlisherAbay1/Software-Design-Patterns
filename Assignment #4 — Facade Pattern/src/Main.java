@@ -20,7 +20,7 @@ public class Main {
             audioTracks
         );
 
-        System.out.println("=== The Facade ===");
+        System.out.println("--- The Facade ---");
         System.out.println("Source file: " + sourceVideo.getFileName()
             + ", bitrait: " + sourceVideo.getBitrate() + " bps");
         System.out.println();
@@ -29,7 +29,7 @@ public class Main {
         VideoFile convertedVideo = videoConverter.convert(sourceVideo, "H.265");
 
         System.out.println();
-        System.out.println("=== Conversion result ===");
+        System.out.println("--- Conversion result ---");
         System.out.println("File: " + convertedVideo.getFileName());
         System.out.println("New bitrate: " + convertedVideo.getBitrate() + " bps");
         System.out.println("New codec: " + convertedVideo.getCodec().getClass().getSimpleName());
