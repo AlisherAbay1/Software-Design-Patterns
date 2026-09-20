@@ -8,11 +8,12 @@ public class VideoFile {
     private AudioFile[] audioFiles;
     private Integer bitrate;
 
-    public VideoFile(String fileName, byte[] video, Integer bitrate, VideoCodec codec) {
+    public VideoFile(String fileName, byte[] video, Integer bitrate, VideoCodec codec, AudioFile[] audioFiles) {
         this.fileName = fileName;
         this.video = video;
         this.bitrate = bitrate;
         this.codec = codec;
+        this.audioFiles = audioFiles;
     }
 
     public String getFileName() {

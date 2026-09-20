@@ -9,7 +9,7 @@ public class AudioMixer {
 
     public void mix(AudioFile[] audioFiles) {
         for (AudioFile audioFile: audioFiles) {
-            System.out.println("File: " + audioFile.getTrackName() + "mixed.");
+            System.out.println("File: " + audioFile.getTrackName() + " mixed.");
         }
     }
 }

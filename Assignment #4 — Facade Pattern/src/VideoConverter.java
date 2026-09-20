@@ -28,7 +28,8 @@ public class VideoConverter {
             videoFile.getFileName(), 
             encodedVideo, 
             newBitrate, 
-            newVideoCodec
+            newVideoCodec, 
+            videoFile.getAudioFiles()
         );
 
         return newVideo;
