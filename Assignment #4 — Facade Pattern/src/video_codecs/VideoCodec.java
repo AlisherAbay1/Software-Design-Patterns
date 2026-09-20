@@ -1,6 +1,7 @@
 package video_codecs;
 
 public interface VideoCodec {
-    public void encode(byte[] dataToEncode);
-    public void decode(byte[] dataToDecode);
+    public byte[] encode(byte[] dataToEncode);
+    public byte[] decode(byte[] dataToDecode);
+    public int calculateBitrate(int bitrate);
 }

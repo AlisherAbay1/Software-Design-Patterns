@@ -4,9 +4,9 @@ import video_codecs.VideoCodec;
 public class VideoFile {
     private String fileName;
     private byte[] video;
-    private Integer bitrate;
     private VideoCodec codec;
     private AudioFile[] audioFiles;
+    private Integer bitrate;
 
     public VideoFile(String fileName, byte[] video, Integer bitrate, VideoCodec codec) {
         this.fileName = fileName;
