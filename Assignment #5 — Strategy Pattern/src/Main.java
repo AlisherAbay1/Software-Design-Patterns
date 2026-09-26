@@ -48,7 +48,7 @@ public class Main {
         );
     }
 
-    private  static void printRoute(Navigator navigator) {
+    private static void printRoute(Navigator navigator) {
         System.out.println("-".repeat(43));
         System.out.printf("Path from %s to %s.%n", 
             navigator.getFromStreet().getDisplayName(), navigator.getToStreet().getDisplayName()
