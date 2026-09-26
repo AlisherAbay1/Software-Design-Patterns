@@ -10,7 +10,7 @@ public class WalkStrategy implements Strategy {
 
     @Override
     public int calculateKmForPath(AlmatyStreet fromStreet, AlmatyStreet toStreet) {
-        return (fromStreet.getDistanceFactor() + toStreet.getDistanceFactor()) / 10;
+        return (fromStreet.getDistanceFactor() + toStreet.getDistanceFactor()) / 2;
     }
 
     @Override

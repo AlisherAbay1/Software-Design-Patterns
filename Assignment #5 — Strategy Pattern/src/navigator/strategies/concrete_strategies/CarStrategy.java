@@ -9,8 +9,8 @@ public class CarStrategy implements Strategy {
     private static final int SPEED_KM_H = 40;
 
     @Override
-    public int calculateKmForPath(AlmatyStreet from, AlmatyStreet to) {
-        return (from.getDistanceFactor() + to.getDistanceFactor()) / 10;
+    public int calculateKmForPath(AlmatyStreet fromStreet, AlmatyStreet toStreet) {
+        return (fromStreet.getDistanceFactor() + toStreet.getDistanceFactor()) / 2;
     }
 
     @Override

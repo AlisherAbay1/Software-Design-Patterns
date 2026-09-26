@@ -23,4 +23,12 @@ public class Navigator {
         LocalTime time = strategy.calculateTimeForPath(km);
         return new PathValues(km, cost, time);
     }
+
+    public AlmatyStreet getFromStreet() {
+        return fromStreet;
+    }
+
+    public AlmatyStreet getToStreet() {
+        return toStreet;
+    }
 }
