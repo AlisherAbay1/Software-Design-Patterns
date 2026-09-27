@@ -5,7 +5,7 @@ import file_system.elements.FileSystemElement;
 import file_system.elements.concrete_elements.*;
 
 public class SizeCalculatorVisitor implements FileSystemVisitor {
-    private int size = 0;
+    private long size = 0;
 
     @Override 
     public void visitFile(File file) {
@@ -19,7 +19,7 @@ public class SizeCalculatorVisitor implements FileSystemVisitor {
         }
     }
 
-    public int getSize() {
+    public long getSize() {
         return size;
     }
 }
