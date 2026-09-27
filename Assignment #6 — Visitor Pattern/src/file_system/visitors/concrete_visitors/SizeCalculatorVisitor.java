@@ -1,5 +1,24 @@
 package file_system.visitors.concrete_visitors;
 
-public class SizeCalculatorVisitor {
+import file_system.visitors.*;
+import file_system.elements.concrete_elements.*;
 
+public class SizeCalculatorVisitor implements FileSystemVisitor {
+    private int size = 0;
+
+    @Override 
+    public void visitFile(File file) {
+        this.size += file.getBytes().size();
+    }
+
+    @Override 
+    public void visitDirectory(Directory directory) {
+        for (File file: directory.getFiles()) {
+            visitFile(file);
+        }
+    }
+
+    public int getSize() {
+        return size;
+    }
 }
