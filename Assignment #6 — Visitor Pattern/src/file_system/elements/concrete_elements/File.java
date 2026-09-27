@@ -2,7 +2,6 @@ package file_system.elements.concrete_elements;
 
 import file_system.elements.FileSystemElement;
 import file_system.visitors.FileSystemVisitor;
-
 import java.util.List;
 
 public class File implements FileSystemElement {

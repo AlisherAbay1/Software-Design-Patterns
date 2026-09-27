@@ -1,25 +1,24 @@
 package file_system.elements.concrete_elements;
 
 import java.util.List;
-
 import file_system.elements.FileSystemElement;
 import file_system.visitors.FileSystemVisitor;
 
 public class Directory implements FileSystemElement {
     private String directoryName;
-    private List<File> files;
+    private List<FileSystemElement> children;
 
-    public Directory(String directoryName, List<File> files) {
+    public Directory(String directoryName, List<FileSystemElement> children) {
         this.directoryName = directoryName;
-        this.files = files;
+        this.children = children;
     }
 
     public String getDirectoryName() {
         return directoryName;
     }
 
-    public List<File> getFiles() {
-        return files;
+    public List<FileSystemElement> getChildren() {
+        return children;
     }
 
     public void accept(FileSystemVisitor visitor) {

@@ -1,6 +1,7 @@
 package file_system.visitors.concrete_visitors;
 
 import file_system.visitors.*;
+import file_system.elements.FileSystemElement;
 import file_system.elements.concrete_elements.*;
 
 public class SizeCalculatorVisitor implements FileSystemVisitor {
@@ -13,8 +14,8 @@ public class SizeCalculatorVisitor implements FileSystemVisitor {
 
     @Override 
     public void visitDirectory(Directory directory) {
-        for (File file: directory.getFiles()) {
-            visitFile(file);
+        for (FileSystemElement child: directory.getChildren()) {
+            child.accept(this);
         }
     }
 
