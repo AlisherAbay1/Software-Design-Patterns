@@ -75,4 +75,8 @@ public abstract class GameCharacter {
     public boolean isAlive() {
         return this.health > 0;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
