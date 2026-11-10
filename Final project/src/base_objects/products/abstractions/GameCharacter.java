@@ -92,6 +92,7 @@ public abstract class GameCharacter {
 
     public void defend() {
         this.isDefending = true;
+        notifyDefended();
     }
 
     public String getName() {
@@ -154,6 +155,12 @@ public abstract class GameCharacter {
     private void notifyAtackMissed() {
         for (GameListener listener : listeners) {
             listener.onAttackMissed(this);
+        }
+    }
+
+    private void notifyDefended() {
+        for (GameListener listener : listeners) {
+            listener.onDefended(this);
         }
     }
 }
