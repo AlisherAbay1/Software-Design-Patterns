@@ -1,4 +1,4 @@
-package abstract_factory.products.abstractions;
+package base_objects.abstractions;
 
 public abstract class Weapon {
     protected int damage; 

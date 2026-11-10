@@ -1,10 +1,10 @@
 package builders.concrete_builders;
 
+import abstract_factory.CharacterFactory;
+import base_objects.abstractions.Armor;
+import base_objects.abstractions.GameCharacter;
+import base_objects.abstractions.Weapon;
 import builders.CharacterBuilder;
-import abstract_factory.factories.CharacterFactory;
-import abstract_factory.products.abstractions.Armor;
-import abstract_factory.products.abstractions.GameCharacter;
-import abstract_factory.products.abstractions.Weapon;
 
 public class CharacterJsonBuilder extends CharacterBuilder {
     private GameCharacter character;

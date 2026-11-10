@@ -1,6 +1,6 @@
-package abstract_factory.products.implementations.characters;
+package base_objects.implementations.characters;
 
-import abstract_factory.products.abstractions.GameCharacter;
+import base_objects.abstractions.GameCharacter;
 
 public class Mage extends GameCharacter {
     public Mage(String name) {

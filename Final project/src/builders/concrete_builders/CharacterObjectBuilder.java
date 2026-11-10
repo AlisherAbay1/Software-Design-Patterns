@@ -1,8 +1,8 @@
 package builders.concrete_builders;
 
+import abstract_factory.CharacterFactory;
+import base_objects.abstractions.GameCharacter;
 import builders.CharacterBuilder;
-import abstract_factory.factories.CharacterFactory;
-import abstract_factory.products.abstractions.GameCharacter;
 
 public class CharacterObjectBuilder extends CharacterBuilder {
     private GameCharacter character;

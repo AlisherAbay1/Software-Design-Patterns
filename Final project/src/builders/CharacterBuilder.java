@@ -1,6 +1,6 @@
 package builders;
 
-import abstract_factory.factories.CharacterFactory;
+import abstract_factory.CharacterFactory;
 
 public abstract class CharacterBuilder {
     protected final CharacterFactory factory;

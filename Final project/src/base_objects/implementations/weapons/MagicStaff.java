@@ -1,6 +1,6 @@
-package abstract_factory.products.implementations.weapons;
+package base_objects.implementations.weapons;
 
-import abstract_factory.products.abstractions.Weapon;;
+import base_objects.abstractions.Weapon;;
 
 public class MagicStaff extends Weapon {
     public MagicStaff() {
