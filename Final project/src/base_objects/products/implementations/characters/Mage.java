@@ -4,9 +4,6 @@ import base_objects.products.abstractions.GameCharacter;
 
 public class Mage extends GameCharacter {
     public Mage(String name) {
-        this.name = name;
-        this.role = "Mage";
-        this.health = 90;
-        this.attackPower = 15;
+        super(name, "Mage", 90, 15);
     }
 }

@@ -1,18 +1,28 @@
 package base_objects.products.abstractions;
 
 import base_objects.enums.Action;
-
 import strategy.CombatStrategy;
+import bridge.Renderer;
 
 public abstract class GameCharacter {
     protected String name;
     protected String role;
+    protected int maxHealth;
     protected int health;
     protected int attackPower;
     protected Armor armor;
     protected Weapon weapon;
     protected boolean isDefending;
     protected CombatStrategy strategy;
+    protected Renderer renderer;
+
+    protected GameCharacter(String name, String role, int maxHealth, int attackPower) {
+        this.name = name;
+        this.role = role;
+        this.maxHealth = maxHealth;
+        this.health = maxHealth;
+        this.attackPower = attackPower;
+    }
 
     public void equipArmor(Armor armor) {
         this.armor = armor;
@@ -46,7 +56,7 @@ public abstract class GameCharacter {
             this.isDefending = false;
         } 
 
-        health -= actualDamage;
+        health = Math.max(0, health - actualDamage);
 
         if (!isAlive()) {
             System.out.println(name + " has died");
@@ -79,20 +89,12 @@ public abstract class GameCharacter {
         this.isDefending = true;
     }
 
-    public Action chooseAction(GameCharacter enemy) {
-        return strategy.chooseAction(this, enemy);
-    }
-
-    public void setStrategy(CombatStrategy strategy) {
-        this.strategy = strategy;
-    }
-
     public String getName() {
         return this.name;
     }
 
     public int getHealth() {
-        return Math.max(health, 0);
+        return health;
     }
 
     public String getRole() {
@@ -106,4 +108,22 @@ public abstract class GameCharacter {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Action chooseAction(GameCharacter enemy) {
+        return strategy.chooseAction(this, enemy);
+    }
+
+    public void setStrategy(CombatStrategy strategy) {
+        this.strategy = strategy;
+    }
+
+    public void display() {
+        renderer.renderText(name + " (" + role + ")");
+        renderer.renderBar("HP", health, maxHealth);
+    }
+
+    public void setRenderer(Renderer renderer) {
+        this.renderer = renderer;
+    }
 }
+

@@ -4,9 +4,6 @@ import base_objects.products.abstractions.GameCharacter;
 
 public class Warrior extends GameCharacter {
     public Warrior(String name) {
-        this.name = name;
-        this.role = "Warrior";
-        this.health = 80;
-        this.attackPower = 20;
+        super(name, "Warrior", 80, 20); 
     }
 }
