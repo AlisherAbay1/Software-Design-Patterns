@@ -1,8 +1,12 @@
 package base_objects.products.abstractions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import base_objects.enums.Action;
 import strategy.CombatStrategy;
 import bridge.Renderer;
+import observer.GameListener;
 
 public abstract class GameCharacter {
     protected String name;
@@ -13,8 +17,10 @@ public abstract class GameCharacter {
     protected Armor armor;
     protected Weapon weapon;
     protected boolean isDefending;
+
     protected CombatStrategy strategy;
     protected Renderer renderer;
+    private final List<GameListener> listeners = new ArrayList<>();
 
     protected GameCharacter(String name, String role, int maxHealth, int attackPower) {
         this.name = name;
@@ -45,7 +51,7 @@ public abstract class GameCharacter {
         }
 
         if (damage <= protection) {
-            System.out.println("Attack missed.");
+            notifyAtackMissed();
             return;
         }
 
@@ -58,11 +64,10 @@ public abstract class GameCharacter {
 
         health = Math.max(0, health - actualDamage);
 
+        notifyDamaged(actualDamage);
         if (!isAlive()) {
-            System.out.println(name + " has died");
-        } else {
-            System.out.println("Current health is " + health);
-        }
+            notifyDefeated();
+        } 
     }
 
     public void attack(GameCharacter enemy) {
@@ -125,5 +130,30 @@ public abstract class GameCharacter {
     public void setRenderer(Renderer renderer) {
         this.renderer = renderer;
     }
-}
 
+    public void addListener(GameListener listener) { 
+        listeners.add(listener); 
+    }
+
+    public void removeListener(GameListener listener) { 
+        listeners.remove(listener); 
+    }
+
+    private void notifyDamaged(int amount) {
+        for (GameListener listener : listeners) {
+            listener.onDamaged(this, amount);
+        }
+    }
+
+    private void notifyDefeated() {
+        for (GameListener listener : listeners) {
+            listener.onDefeated(this);
+        }
+    }
+
+    private void notifyAtackMissed() {
+        for (GameListener listener : listeners) {
+            listener.onAttackMissed(this);
+        }
+    }
+}
