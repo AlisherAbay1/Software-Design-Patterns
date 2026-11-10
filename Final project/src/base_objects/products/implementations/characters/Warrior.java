@@ -1,6 +1,6 @@
-package base_objects.implementations.characters;
+package base_objects.products.implementations.characters;
 
-import base_objects.abstractions.GameCharacter;
+import base_objects.products.abstractions.GameCharacter;
 
 public class Warrior extends GameCharacter {
     public Warrior(String name) {

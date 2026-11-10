@@ -1,12 +1,12 @@
 package abstract_factory.implementations;
 
 import abstract_factory.CharacterFactory;
-import base_objects.abstractions.Armor;
-import base_objects.abstractions.GameCharacter;
-import base_objects.abstractions.Weapon;
-import base_objects.implementations.armors.LightArmor;
-import base_objects.implementations.characters.Archer;
-import base_objects.implementations.weapons.Bow;
+import base_objects.products.abstractions.Armor;
+import base_objects.products.abstractions.GameCharacter;
+import base_objects.products.abstractions.Weapon;
+import base_objects.products.implementations.armors.LightArmor;
+import base_objects.products.implementations.characters.Archer;
+import base_objects.products.implementations.weapons.Bow;
 
 
 public class ArcherFactory implements CharacterFactory {

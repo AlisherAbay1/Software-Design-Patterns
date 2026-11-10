@@ -1,6 +1,6 @@
-package base_objects.implementations.weapons;
+package base_objects.products.implementations.weapons;
 
-import base_objects.abstractions.Weapon;;
+import base_objects.products.abstractions.Weapon;;
 
 public class Sword extends Weapon {
     public Sword() {

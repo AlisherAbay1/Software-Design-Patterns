@@ -1,6 +1,6 @@
-package base_objects.implementations.armors;
+package base_objects.products.implementations.armors;
 
-import base_objects.abstractions.Armor;
+import base_objects.products.abstractions.Armor;
 
 public class MageRobe extends Armor {
     public MageRobe() {

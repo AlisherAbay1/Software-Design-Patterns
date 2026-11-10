@@ -1,12 +1,12 @@
 package abstract_factory.implementations;
 
 import abstract_factory.CharacterFactory;
-import base_objects.abstractions.Armor;
-import base_objects.abstractions.GameCharacter;
-import base_objects.abstractions.Weapon;
-import base_objects.implementations.armors.HeavyArmor;
-import base_objects.implementations.characters.Warrior;
-import base_objects.implementations.weapons.Sword;
+import base_objects.products.abstractions.Armor;
+import base_objects.products.abstractions.GameCharacter;
+import base_objects.products.abstractions.Weapon;
+import base_objects.products.implementations.armors.HeavyArmor;
+import base_objects.products.implementations.characters.Warrior;
+import base_objects.products.implementations.weapons.Sword;
 
 public class WarriorFactory implements CharacterFactory {
     public GameCharacter createCharacter(String name) {

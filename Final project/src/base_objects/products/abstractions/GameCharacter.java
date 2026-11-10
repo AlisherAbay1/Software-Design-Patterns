@@ -1,4 +1,8 @@
-package base_objects.abstractions;
+package base_objects.products.abstractions;
+
+import base_objects.enums.Action;
+
+import strategy.CombatStrategy;
 
 public abstract class GameCharacter {
     protected String name;
@@ -7,6 +11,8 @@ public abstract class GameCharacter {
     protected int attackPower;
     protected Armor armor;
     protected Weapon weapon;
+    protected boolean isDefending;
+    protected CombatStrategy strategy;
 
     public void equipArmor(Armor armor) {
         this.armor = armor;
@@ -32,7 +38,16 @@ public abstract class GameCharacter {
             System.out.println("Attack missed.");
             return;
         }
-        health -= damage - protection;
+
+        int actualDamage = damage - protection;
+        
+        if (this.isDefending) {
+            actualDamage = Math.max(1, actualDamage / 2);
+            this.isDefending = false;
+        } 
+
+        health -= actualDamage;
+
         if (!isAlive()) {
             System.out.println(name + " has died");
         } else {
@@ -40,12 +55,12 @@ public abstract class GameCharacter {
         }
     }
 
-    public void attack(GameCharacter character) {
+    public void attack(GameCharacter enemy) {
         if (!isAlive()) {
             System.out.println("You are dead, you can't attack.");
             return;
         }
-        if (!character.isAlive()) {
+        if (!enemy.isAlive()) {
             System.out.println("(S)he is already dead, stop attacking.");
             return;
         }
@@ -57,7 +72,19 @@ public abstract class GameCharacter {
         }
         int damage = attackPower + weaponDamage;
         System.out.println(this.name + " tried to attack with " + damage + " attack power.");
-        character.takeDamage(damage);
+        enemy.takeDamage(damage);
+    }
+
+    public void defend() {
+        this.isDefending = true;
+    }
+
+    public Action chooseAction(GameCharacter enemy) {
+        return strategy.chooseAction(this, enemy);
+    }
+
+    public void setStrategy(CombatStrategy strategy) {
+        this.strategy = strategy;
     }
 
     public String getName() {
